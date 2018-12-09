@@ -12,6 +12,9 @@ source:
 build:
   skip: True  # [not linux]
   number: 0
+  # https://github.com/intel/intel-vaapi-driver/blob/master/NEWS
+  run_exports:
+    - {{ pin_subpackage('intel-vaapi-driver', max_pin='x.x') }}
   script:
     - ./configure --prefix=$PREFIX --enable-hybrid-codec
     - make -j$(nproc) install
@@ -21,8 +24,6 @@ requirements:
     - {{ compiler('c') }}
     - pkg-config
   host:
-    - intel-hybrid-driver
-  run:
     - intel-hybrid-driver
 
 test:
