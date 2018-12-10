@@ -1,5 +1,5 @@
 {% set name = "intel-vaapi-driver" %}
-{% set version = "2.2.0" %}
+{% set version = "2.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/intel/{{ name }}/releases/download/{{ version }}/{{ name }}-{{ version }}.tar.bz2
-  sha1: 0934f97ddcaf4e633f59d049226723239b645b33
+  sha1: 89096f99da753ac5858304e6c17f5dd9e7581d5b
 
 build:
   skip: True  # [not linux]
