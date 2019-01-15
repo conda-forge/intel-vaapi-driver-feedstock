@@ -11,7 +11,7 @@ source:
 
 build:
   skip: True  # [not linux]
-  number: 0
+  number: 1000
   # https://github.com/intel/intel-vaapi-driver/blob/master/NEWS
   run_exports:
     - {{ pin_subpackage('intel-vaapi-driver', max_pin='x.x') }}
