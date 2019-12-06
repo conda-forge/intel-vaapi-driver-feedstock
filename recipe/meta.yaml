@@ -25,6 +25,7 @@ requirements:
     - pkg-config
   host:
     - intel-hybrid-driver
+    - libva
 
 test:
   commands:
