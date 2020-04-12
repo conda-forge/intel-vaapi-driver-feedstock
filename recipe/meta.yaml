@@ -38,7 +38,6 @@ about:
   license_file: COPYING
   summary: 'VA-API (Video Acceleration API) user mode driver for Intel GEN Graphics family'
 
-  # The remaining entries in this section are optional, but recommended
   description: |
     VA-API is an open-source library and API specification, which provides
     access to graphics hardware acceleration capabilities for video processing.
