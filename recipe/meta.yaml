@@ -1,5 +1,5 @@
 {% set name = "intel-vaapi-driver" %}
-{% set version = "2.3.0" %}
+{% set version = "2.4.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/intel/{{ name }}/releases/download/{{ version }}/{{ name }}-{{ version }}.tar.bz2
-  sha1: 89096f99da753ac5858304e6c17f5dd9e7581d5b
+  sha1: c998e06f13238c6419bb38ede9a13e453312737b
 
 build:
-  skip: True  # [not linux]
-  number: 1000
+  skip: true  # [not linux]
+  number: 0
   # https://github.com/intel/intel-vaapi-driver/blob/master/NEWS
   run_exports:
     - {{ pin_subpackage('intel-vaapi-driver', max_pin='x.x') }}
@@ -35,7 +35,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: COPYING
-  summary: 'VA-API (Video Acceleration API) user mode driver for Intel GEN Graphics family'
+  summary: VA-API (Video Acceleration API) user mode driver for Intel GEN Graphics family
 
   # The remaining entries in this section are optional, but recommended
   description: |
